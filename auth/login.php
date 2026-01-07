@@ -43,7 +43,10 @@ if (isset($_POST['login'])) {
 include "../layout.php";
 ?>
 
-<div class="container col-md-4">
+<!-- Particles Background -->
+<div id="particles-js"></div>
+
+<div class="container col-md-4 position-relative">
     <div class="glass p-4">
         <h3 class="text-center mb-4">Login Admin</h3>
         <form method="POST">
@@ -73,10 +76,6 @@ include "../layout.php";
   </div>
 </div>
 
-<style>
-.btn-hover {transition: all 0.3s ease;}
-.btn-hover:hover {transform: translateY(-3px); box-shadow:0 5px 15px rgba(0,0,0,0.3);}
-</style>
 
 <?php if($showModal){ ?>
 <script>

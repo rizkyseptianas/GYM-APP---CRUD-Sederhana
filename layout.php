@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-bs-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GYM APP</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="../gym-app/assets/styles.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Animate.css untuk animasi -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body class="bg-dark text-white">
@@ -30,5 +32,14 @@
 </nav>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Link FontAwesome untuk ikon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Particles.js library -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>

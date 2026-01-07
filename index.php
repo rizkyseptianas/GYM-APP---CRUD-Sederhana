@@ -15,15 +15,43 @@ include "layout.php";
 $totalMember = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM members"));
 ?>
 
-<div class="container mt-5">
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <div class="container mt-5 position-relative">
 
     <!-- Logo / Header -->
     <div class="text-center mb-5">
-        <img src="assets/img/logoo.png" alt="Logo" style="width:210px;">
-        <h2 class="mt-3">Dashboard Admin</h2>
+        <img src="assets/img/logoo.png" alt="Logo" style="width:210px;" class="animate__animated animate__fadeInDown">
+        <h2 class="mt-3 animate__animated animate__fadeInUp">Dashboard Admin</h2>
     </div>
 
-    <div class="row g-4">
+    <!-- System Info -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="glass p-4 text-center animate__animated animate__zoomIn">
+                <div class="row">
+                    <div class="col-md-4">
+                        <i class="fas fa-clock fa-2x mb-2"></i>
+                        <h5>Waktu</h5>
+                        <div id="current-time" class="h4">--:--:--</div>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-calendar fa-2x mb-2"></i>
+                        <h5>Tanggal</h5>
+                        <div id="current-date" class="h4">--/--/--</div>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-server fa-2x mb-2"></i>
+                        <h5>Status Sistem</h5>
+                        <div class="h4 text-success">Online</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 animate__animated animate__fadeInUp">
 
         <!-- Total Member -->
         <div class="col-md-4">
@@ -55,39 +83,4 @@ $totalMember = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM members"));
     </div>
 </div>
 
-<style>
-/* Glass card modern */
-.glass {
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-.glass:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-}
 
-/* Tombol modern */
-.btn-hover {
-    transition: all 0.3s ease;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-}
-.btn-hover:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* Gradien untuk tombol */
-.btn-primary { background: linear-gradient(45deg,#007bff,#00c6ff); border:none; color:#fff;}
-.btn-success { background: linear-gradient(45deg,#28a745,#85e085); border:none; color:#fff;}
-
-/* Ikon card */
-i { color:#fff; }
-</style>
-
-<!-- Link FontAwesome untuk ikon -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

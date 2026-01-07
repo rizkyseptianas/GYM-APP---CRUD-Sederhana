@@ -9,7 +9,7 @@ $data = mysqli_query($conn,"SELECT * FROM members ORDER BY created_at DESC");
 $adaData = mysqli_num_rows($data) > 0;
 ?>
 
-<div class="container col-md-10 my-5">
+<div class="container col-md-10 my-5 report-page">
     <div class="glass p-4 shadow-lg rounded-4">
         <h3 class="text-center mb-4" style="font-weight:700; color:#4a90e2;">Report Member</h3>
 
@@ -28,8 +28,8 @@ $adaData = mysqli_num_rows($data) > 0;
         <!-- Tabel Data -->
         <?php if($adaData){ ?>
             <div style="overflow-x:auto;">
-                <table class="table table-striped table-hover table-bordered align-middle">
-                    <thead class="text-white" style="background: linear-gradient(to right, #4a90e2, #50e3c2);">
+                <table class="table table-dark table-striped table-hover table-bordered align-middle">
+                    <thead class="bg-dark text-white">
                         <tr>
                             <th>Nama</th>
                             <th>Umur</th>
@@ -62,26 +62,3 @@ $adaData = mysqli_num_rows($data) > 0;
     </div>
 </div>
 
-<style>
-.glass {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-}
-
-.btn-hover {transition: all 0.3s ease;}
-.btn-hover:hover {transform: translateY(-3px); box-shadow:0 5px 15px rgba(0,0,0,0.3);}
-
-table th, table td {
-    vertical-align: middle;
-}
-
-table tbody tr:hover {
-    background-color: rgba(74, 144, 226, 0.1);
-}
-
-@media print {
-    button, a {display:none !important;}
-    body {background: #fff; color:#000;}
-    table {border-collapse: collapse; width: 100%;}
-}
-</style>

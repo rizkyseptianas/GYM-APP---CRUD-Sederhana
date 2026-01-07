@@ -52,7 +52,4 @@ $data = mysqli_query($conn,"SELECT * FROM members ORDER BY created_at DESC");
     </div>
 </div>
 
-<style>
-.btn-hover {transition: all 0.3s ease;}
-.btn-hover:hover {transform: translateY(-3px);box-shadow: 0 5px 15px rgba(0,0,0,0.3);}
-</style>
+<style></style>
