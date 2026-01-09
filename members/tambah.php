@@ -33,22 +33,35 @@ include "../layout.php";
 
 <div class="container col-md-6">
     <div class="glass p-4">
-        <h3>Tambah Member</h3>
+        <h3 class="form-title">Tambah Member</h3>
         <form method="POST">
-            <input type="text" class="form-control mb-3" name="nama" placeholder="Nama Member" required>
-            <input type="date" class="form-control mb-3" name="tanggal_lahir" required>
-            <select name="paket" class="form-control mb-3">
-                <option value="Reguler">Reguler</option>
-                <option value="Premium">Premium</option>
-                <option value="VIP">VIP</option>
-            </select>
-            <select name="status_member" class="form-control mb-3">
-                <option value="aktif">Aktif</option>
-                <option value="nonaktif">Nonaktif</option>
-            </select>
-            <button type="submit" name="submit" class="btn btn-success btn-hover">Tambah</button>
-            <a href="index.php" class="btn btn-danger btn-hover">Batal</a>
-        </form>
+
+    <label class="form-label">Nama Member</label>
+    <input type="text" class="form-control mb-3" name="nama" placeholder="Masukkan nama member" required>
+
+    <label class="form-label">Tanggal Lahir</label>
+    <input type="date" class="form-control mb-3" name="tanggal_lahir" required>
+
+    <label class="form-label">Paket Member</label>
+    <select name="paket" class="form-control mb-3">
+        <option value="" disabled selected>Pilih Paket</option>
+        <option value="Reguler">Reguler</option>
+        <option value="Premium">Premium</option>
+        <option value="VIP">VIP</option>
+    </select>
+
+
+    <label class="form-label">Status Member</label>
+    <select name="status_member" class="form-control mb-3">
+        <option value="aktif">Aktif</option>
+        <option value="nonaktif">Nonaktif</option>
+    </select>
+
+    <button type="submit" name="submit" class="btn btn-success btn-hover">Tambah</button>
+    <a href="index.php" class="btn btn-danger btn-hover">Batal</a>
+
+</form>
+
     </div>
 </div>
 
@@ -74,6 +87,11 @@ include "../layout.php";
     transition: 0.3s; 
     cursor: pointer;
 }
+
+.form-title {
+    margin-bottom: 24px;
+}
+
 .btn-success { background:#28a745; }
 .btn-danger  { background:#dc3545; }
 
@@ -104,4 +122,13 @@ include "../layout.php";
 .modal-content.danger { border-top:5px solid #dc3545; }
 .modal-content h4 { margin-bottom:15px; }
 .modal-content p { margin-bottom:20px; }
+
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f1f1f1;
+    letter-spacing: 0.3px;
+}
 </style>

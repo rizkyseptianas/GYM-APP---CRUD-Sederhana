@@ -52,4 +52,42 @@ $data = mysqli_query($conn,"SELECT * FROM members ORDER BY created_at DESC");
     </div>
 </div>
 
-<style></style>
+<style>
+    /* Efek umum tombol */
+.btn-hover {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Hover efek */
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Tombol Primary */
+.btn-primary.btn-hover:hover {
+    background-color: #0d6efd;
+    box-shadow: 0 0 12px rgba(13, 110, 253, 0.8);
+}
+
+/* Tombol Warning (Edit) */
+.btn-warning.btn-hover:hover {
+    background-color: #ffc107;
+    color: #000;
+    box-shadow: 0 0 12px rgba(255, 193, 7, 0.8);
+}
+
+/* Tombol Danger (Hapus) */
+.btn-danger.btn-hover:hover {
+    background-color: #dc3545;
+    box-shadow: 0 0 12px rgba(220, 53, 69, 0.8);
+}
+
+/* Animasi klik */
+.btn-hover:active {
+    transform: scale(0.95);
+}
+
+</style>
